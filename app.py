@@ -8,7 +8,8 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
 
-app = Flask(__name__,root_path=r'C:\\Users\\varun\\Anaconda3\\Lib\\site-packages\\nbconvert\\templates')
+app = Flask(__name__,root_path='C:\\Users\\varun\\Deployment_Flask_Master')
+print(app,"app")
 model = pickle.load(open('model.pk1', 'rb'))
 
 @app.route('/')
